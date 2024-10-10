@@ -1,0 +1,597 @@
+<?php /* Template Name: English Front Page */ ?>
+<?php get_header(); ?>
+
+  <!-- ======= Hero Section ======= -->
+  <section class="slider-section">
+      <div class="container-fluid p-0 m-0">
+          <div class="row no-gutters">
+              <div class="col-md-3">
+                  <!-- Content for the first column -->
+                  <?php if ( has_nav_menu( 'home-slider-vertical-menu' ) ) {
+                      wp_nav_menu( array(
+                          'theme_location' => 'home-slider-vertical-menu',
+                          'menu_id'        => 'home-slider-vertical-menu',
+                          'menu_class'     => 'home-slider-vertical-menu-class',
+                      ) );
+                  } ?>
+
+              </div>
+              <!-- <div id="hero" class="col-md-9 d-flex align-items-center owl-carousel hero-carousel"> -->
+              <div id="hero" class="col-md-9 d-flex  owl-carousel hero-carousel">
+                  <!-- Content for the second column -->
+                  <!-- hompage hero -->
+                  <?php
+                  while(have_posts()){
+                    the_post(); ?>
+
+                  <div class="container-fluid item itemtest d-flex align-items-center justify-content-center" style="background: url('<?php the_field('slider_image_1'); ?>');">
+                  <div class="row justify-content-center">
+                    <div class="col-xl-12" >
+                      <div class="row">
+                        <div class="col-xl-12 text-center">
+                          <h1><?php the_field('slider_title_1'); ?></h1>
+                          <h2><?php the_field('slider_subtitle_1'); ?></h2>
+                          <a href="<?php the_field('slider_button_link_1'); ?>" class="btn-get-started scrollto"><?php the_field('slider_button_text_1'); ?></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="container-fluid item itemtest d-flex align-items-center justify-content-center" style="background: url('<?php the_field('slider_image_2'); ?>');">
+                    <div class="row justify-content-center w-100">
+                      <div class="col-xl-12 text-center">
+                        <h1><?php the_field('slider_title_2'); ?></h1>
+                        <h2><?php the_field('slider_subtitle_2'); ?></h2>
+                        <a href="<?php the_field('slider_button_link_2'); ?>" class="btn-get-started scrollto"><?php the_field('slider_button_text_2'); ?></a>
+                      </div>
+                    </div>
+                  </div>
+                  <?php } ?>
+
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+  <section id="strip-icons"><!-- start strip icons -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="icon-holder">
+            <div class="icon-itself">
+                <img src="<?php echo get_theme_file_uri('/assets/img/counselling.svg'); ?>" alt="Image">
+            </div>
+        </div>
+        <div class="content-holder hea">
+          <h2> Customized Training solutions</h2>
+          <p>Tailor-made programs to meet your specific training needs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+      <div class="icon-holder">
+            <div class="icon-itself">
+                <img src="<?php echo get_theme_file_uri('/assets/img/candidate.svg'); ?>" alt="Image">
+            </div>
+        </div>
+        <div class="content-holder hea">
+          <h2> 200+ Local & Professional Certified Courses</h2>
+          <p>Extensive selection of courses with professional certifications.</p>
+        </div>
+      </div>
+      <div class="col-md-4 hea"> 
+        <div class="content-holder">
+          <div class="hold-ban">
+            <h2> FOOD SAFETY</h2>
+            <p style="color: black">TAMKEEN Supported.</p>
+
+            <button class="btn btn-danger">Register NOW!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </section><!-- End strip icons -->
+
+
+
+
+  
+    <main id="main">
+
+    <!-- ======= Tabs Section ======= -->
+    <section id="tabs" class="tabs">
+      <div class="container">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 pt-5" >
+                <?php the_field('welcome_to_ami_content'); ?>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="<?php the_field('welcome_to_ami_image'); ?>" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Tabs Section -->
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg" style="padding: 60px 0;">
+      <div class="container-fluid">
+
+        <div class="row justify-content-center">
+          <div class="col-xl-6 d-flex align-items-stretch">
+            <a href="#" class="video-thumb-link hide" data-link-for="kqmWw6P_9oE5f6e3d0be1fd1" data-video-id="<?php the_field('video_id'); ?>" style="background: #000"></a><div id="embed_n_Xx1OHFgMY" class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube.com/embed/<?php the_field('video_id'); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>     
+          </div>
+          <div class="col-xl-6 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row text-center">
+                <div class="col-md-6 icon-box">
+                  <i class="bx bxs-business"></i>
+                  <h4>Established in 1992</h4>
+                  <p>More than two decades serving the human resource development sector</p>
+                </div>
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-globe"></i>
+                  <h4>International Accreditations</h4>
+                  <p>Collaboration with over 20+ well-known and respected accreditation bodies worldwide</p>
+                </div>
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-book-content"></i>
+                  <h4>World Class Learning </h4>
+                  <p>Offering high quality standards in teaching and learner support</p>
+                </div>
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-shape-polygon"></i>
+                  <h4>Social Responsibility</h4>
+                  <p>Working towards human potential empowerment and the development of workforce in the Kingdom of Bahrain</p>
+                </div>
+              </div>
+                <div class="text-center content">
+                  <a href="<?php echo site_url('/en/about-us/'); ?>" class="about-btn"><span>Read More</span> <i class="bx bx-chevron-right"></i></a>
+                </div>  
+
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+      <div class="section-title">
+          <h2>OUR PARTNERS</h2>
+          <p>We are proud to be working with our international partners to provide you with only the best training courses and qualifications sought after by employers worldwide. Through our learning partners, we are confident that we can meet your expectations according to the highest international standards, by bringing you with fresh approaches towards learning a qualification.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="owl-carousel clients-carousel">
+              <!-- <img style="max-height: 70px; width: auto; margin-top: 15px;" src="<?php echo get_theme_file_uri('/assets/img/partners/aat.png'); ?>" alt=""> -->
+              <img  src="<?php echo get_theme_file_uri('/assets/img/partners/aat.png'); ?>" alt="">
+              <img  src="<?php echo get_theme_file_uri('/assets/img/partners/ACCA.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/autodesk-new.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/caddCentre.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/certiport.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/CIPS.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/Highfield.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/IMA.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/iosh.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/medicfirstaid.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/NEBOSH.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/NOCN.png'); ?>" alt="">
+              <img src="<?php echo get_theme_file_uri('/assets/img/partners/pmi.png'); ?>" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts py-5">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="icofont-users-alt-3"></i>
+              <span><?php the_field('happy_students_count'); ?></span>
+              <p>Happy Students</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="icofont-library"></i>
+              <span><?php the_field('courses_count'); ?></span>
+              <p>Courses</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="icofont-star"></i>
+              <span><?php the_field('awarding_bodies_count'); ?></span>
+              <p>Awarding Bodies</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="icofont-license"></i>
+              <span><?php the_field('certification_providers_count'); ?></span>
+              <p>Organizations Trained</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+
+    <!-- ======= Courses Section ======= -->
+    <section id="courses" class="courses section-bg">
+      <div class="container">
+      <div class="section-title">
+          <h2>Featured Courses</h2>
+          <p>Al Moalem Institute commits to deliver you the latest and quality training courses available over different learning disciplines as we continue to be recognized as one of the most trusted sources for training consultancy locally and across the region.</p>
+        </div>
+
+        <div class="row">
+
+
+        <?php
+          $featuredCourses = new WP_Query(array(
+            'posts_per_page' => 3,
+            'post_type' => 'courses',
+            'meta_query' => array(
+              array(
+                'key' => 'show_on_homepage',
+                'compare' => 'LIKE',
+                'value' => true
+              )
+            )
+          ));
+            while($featuredCourses->have_posts()){
+              $featuredCourses->the_post(); ?>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="flex items-center justify-center">
+                        <div class="max-w-sm text-left	bg-white shadow-xl rounded-lg overflow-hidden">
+                            <a href="<?php the_permalink(); ?>">
+                              <div class="bg-cover bg-center h-56 p-4"
+                                style="background-image: url(<?php the_field('course_page_banner'); ?>)">
+                              </div>
+                            </a>
+                            <div class="p-4" style="height: 230px;">
+                                <p class="uppercase tracking-wide text-sm font-bold text-red-700">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                                <p class="text-sm text-gray-900"><?php the_field('short_description'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+        <?php } wp_reset_query(); ?>
+
+        </div>
+
+      </div>
+    </section><!-- End Courses Section -->
+
+
+
+    <!-- ======= Courses Break banner Section ======= -->
+    <section id="content-break-banner" class="courses section-bg1">
+      <div class="container">
+        <div class="row">
+          <div class="featured-courses__banner bottom-padding-spacer">
+            <div class="featured-courses__banner-col1">
+              <img class="home-corporate__banner-image" src="<?php echo get_theme_file_uri('/assets/img/featured-courses_break_banner-image.jpg'); ?>" alt="Featured Courses Break banner Image" width="710" height="271">
+            </div>
+            <div class="featured-courses__banner-col2 caption-box2">
+              <h2 class="introduction__heading caption-box2__heading heading-left-bordered">Enhance your career skills with our<span class="caption-box2__heading-split">extensive range of courses and make us your trusted knowledge partner in Bahrain.</span></h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="container tailored__container">
+            <h2 class="tailored__heading heading1 align-center">Customized Training Solutions for Your <span class="heading1__second-color">Business or Professional Growth</span></h2>
+            <p class="p tailored__paragraph">Our customized training solutions are crafted to help you achieve your business or career goals. We follow the process below to create a personalized training plan for you.</p>
+              
+            <div class="tailored__bullets bottom-padding-spacer">
+              <ul class="tailored__bullets-ul">
+                <li class="tailored__bullets-items">Gathering training requirements</li>
+                <li class="tailored__bullets-items">Setting specific training objectives</li>
+                <li class="tailored__bullets-items">Selecting the course(s)</li>
+                <li class="tailored__bullets-items">Reviewing training modules</li>
+                <li class="tailored__bullets-items">Integrating courses and modules</li>
+                <li class="tailored__bullets-items">Choosing trainers and delivery methods</li>
+                <li class="tailored__bullets-items">Selecting the training venue</li>
+                <li class="tailored__bullets-items">Scheduling dates and times for training</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Courses Break Banner Section -->
+
+
+    <!-- ======= Upcoming Batches Section ======= -->
+    <section id="upcomingbatches" class="courses">
+      <div class="container">
+        <div class="section-title">
+          <h2>Up-Coming Batches / Courses</h2>
+          <p>Stay Tuned for our new batches.</p>
+        </div>
+
+        <div class="row">
+
+        <?php
+          // Replace 'your_category_slug' with the slug of your desired category
+          $category = get_term_by('slug', 'upcomingbatches', 'product_cat');
+
+          // Query arguments to fetch products from the category
+          $args = array(
+              'post_type'      => 'product',
+              'posts_per_page' => 6, // Number of products to display
+              'tax_query'      => array(
+                  array(
+                      'taxonomy' => 'product_cat',
+                      'field'    => 'term_id',
+                      'terms'    => $category->term_id,
+                  ),
+              ),
+          );
+
+          $products = new WP_Query($args);
+
+          if ($products->have_posts()) :
+              while ($products->have_posts()) : $products->the_post();
+                  global $product;
+          ?>
+              <div class="col-md-4">
+                <div class="product-item upcoming-batch">
+
+                  <div class="info-upcoming-batch">
+                  <h2><?php the_title(); ?></h2>
+                  <hr>
+                    <p><i class="fa-regular fa-calendar-days"></i> <?php the_field('start_date'); ?> to  <?php the_field('end_date'); ?></p>
+                    <p><i class="fa-regular fa-clock"></i><?php the_field('time_from'); ?> to  <?php the_field('time_to'); ?></p>
+                    <p><i class="fa-solid fa-chalkboard-user"></i> <?php the_field('trainer'); ?> </p>
+                    <p><i class="fa-solid fa-location-dot"></i> <?php the_field('venue'); ?> </p>
+                  </div>
+
+                  <!-- Display "Register Now" button -->
+                  <a href="<?php echo esc_url( add_query_arg( array(
+                                'product_id' => $product->get_id(),
+                                'return_url' => 'https://almoalem.net/2024-moalem/handle-form-submission'
+                                ), 'https://www.almoalem.net/forms/web/' ) ); ?>" class="btn btn-danger">Register Now</a>
+                  <a class="button" href="<?php the_permalink(); ?>" >Know More</a>
+
+                </div>
+              </div>
+
+
+
+              <?php endwhile;
+              wp_reset_postdata(); // Reset post data query
+              else :
+              echo 'No products found';
+              endif; ?>
+        
+      </div>
+
+
+        <div class="section-title" style="margin-top:30px,">
+          <a class="btn btn-moalem" href="https://www.almoalem.net/2024-moalem/en/upcoming-batches/" >View All Upcoming Batches</a>
+        </div>
+
+
+      </div>
+    </section><!-- End Upcoming Batches Section -->
+
+
+
+
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Our passion in training and development is fueled by the dedication of our trainees towards learning and striving for the best. See what our previous learners have to say and discover why we love what we do:</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="owl-carousel testimonials-carousel">
+
+            <?php if(get_field('is_active_testimonial_1')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_1'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_1'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_1'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_1'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>
+
+            <?php if(get_field('is_active_testimonial_2')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_2'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_2'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_2'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_2'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>
+
+            <?php if(get_field('is_active_testimonial_3')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_3'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_3'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_3'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_3'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>
+
+            <?php if(get_field('is_active_testimonial_4')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_4'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_4'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_4'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_4'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>
+
+            <?php if(get_field('is_active_testimonial_5')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_5'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_5'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_5'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_5'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>
+				
+            <?php if(get_field('is_active_testimonial_6')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_6'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_6'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_6'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_6'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>				
+				
+            <?php if(get_field('is_active_testimonial_7')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_7'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_7'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_7'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_7'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>		
+				
+            <?php if(get_field('is_active_testimonial_8')) : ?>
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="<?php the_field('testimonial_photo_8'); ?>" class="testimonial-img" alt="">
+                  <h3><?php the_field('testimonial_name_8'); ?></h3>
+                  <h4><?php the_field('testimonial_subtitle_8'); ?></h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <object
+                      data="https://www.youtube.com/embed/<?php the_field('testimonial_quote_8'); ?>?&origin=https://almoalem.net"
+                      type="text/html"
+                      width="100%"
+                      height="220">
+                      <param name="allowfullscreen" value="true">
+                    </object>
+                  </p>
+                </div>
+              </div>
+            <?php endif; ?>				
+				
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+  </main><!-- End #main -->
+
+<?php get_footer(); ?>
